@@ -9,7 +9,7 @@ import {setUser} from './action/userAction'
 
 const store = configureStore()
 store.subscribe(()=>{
-    console.log('redux store app' , store.getSate())
+    console.log('redux store app' , store.getState())
 })
 
 if(localStorage.getItem('userAuthToken')){

@@ -4,7 +4,7 @@ import userReducer from '../reducer/userReducer'
 const configureStore = ()=>{
     const store = createStore(combineReducers({
         user: userReducer,
-        blogs: blogsReducer
+        // blogs: blogsReducer
     }))
     return store
 }
