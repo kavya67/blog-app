@@ -12,8 +12,10 @@ const userRouter = require('./app/controllers/userController')
 const blogRouter = require('./app/controllers/blogController')
 
 
+
 app.use('/users', userRouter)
 app.use('/blog', blogRouter)
+
 
 app.listen(port, ()=>{
     console.log('listening to port', port)

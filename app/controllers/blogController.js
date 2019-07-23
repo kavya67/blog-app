@@ -29,6 +29,8 @@ router.get('/:id', authenticateUser, (req,res)=>{
         .catch(err=>res.send(err))
 })
 
+
+
 router.put('/:id' , authenticateUser, (req,res)=>{
     const id = req.params.id
     const body = req.body
