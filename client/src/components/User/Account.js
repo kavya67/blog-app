@@ -1,7 +1,11 @@
 import React from 'react'
-import axios from '../config/config'
-import {setUser} from '../action/userAction'
+import axios from '../../config/config'
+import {setUser} from '../../action/userAction'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+import BlogList from '../Blog/BlogList'
+
+
 class Account extends React.Component{
 
     componentDidMount(){
@@ -11,7 +15,7 @@ class Account extends React.Component{
             }
         })
             .then(response=>{
-                console.log(response.data)
+                // console.log(response.data)
                 this.props.dispatch(setUser(response.data))
             })
     }
@@ -19,6 +23,10 @@ class Account extends React.Component{
         return(
             <div>
                 <h1>Welcome {this.props.user.username}</h1>
+                <BlogList/>
+                <Link to = "/blog/add">Create Blog</Link>
+                
+
             </div>
         )
     }

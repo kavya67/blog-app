@@ -1,8 +1,8 @@
 import React from 'react'
-import axios from '../config/config'
+import axios from '../../config/config'
 
 import {connect} from 'react-redux'
-import {resetUser} from '../action/userAction'
+import {resetUser} from '../../action/userAction'
 
 class Logout extends React.Component{
 
@@ -15,7 +15,7 @@ class Logout extends React.Component{
             .then(()=>{
                 localStorage.removeItem('userAuthToken')
                 this.props.dispatch(resetUser())
-                this.props.history.push('/users/login')
+                this.props.history.push('/')
             })
     }
 
