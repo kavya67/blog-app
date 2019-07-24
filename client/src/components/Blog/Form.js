@@ -1,11 +1,13 @@
 import React from 'react'
 
+
 class Form extends React.Component{
     constructor(props){
         super(props)
         this.state = {
             title:props.blog ? props.blog.title : '',
             description:props.blog ? props.blog.description : ''
+          
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -28,10 +30,12 @@ class Form extends React.Component{
 
         this.props.handleSubmit(formData)
     }
+
+
     render(){
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} >
                     <div>
                         <label>Title</label>
                         <input 

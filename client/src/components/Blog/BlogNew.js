@@ -21,6 +21,8 @@ class BlogNew extends React.Component{
                 this.props.history.push('/users/account')
             })
 
+        
+
     }
 
     render(){
