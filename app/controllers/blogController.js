@@ -12,7 +12,7 @@ router.post('/', authenticateUser, (req,res)=>{
         .catch(err=>res.send(err))
 })
 
-router.get('/list', (req,res)=>{
+router.get('/list', authenticateUser, (req,res)=>{
     Blog.find()
         .then(blogs=>res.send(blogs))
         .catch(err=>res.send(err))
@@ -26,7 +26,7 @@ router.get('/', authenticateUser, (req,res)=>{
         .catch(err=>res.send(err))
 })
 
-router.get('/:id',(req,res)=>{
+router.get('/:id', authenticateUser, (req,res)=>{
     const id = req.params.id
     Blog.findOne({
         _id: id

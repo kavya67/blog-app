@@ -27,12 +27,12 @@ class App extends React.Component{
                        <div>
                            <li><Link to = "/users/account">Account</Link></li>
                            <li><Link to = "/users/logout">Logout</Link></li>
+                           <li><Link to = "/blog/all">Explore</Link></li>
                        </div>
                    )}
                    </ul>
                    
                    <Switch>
-                       <Route path = "/" component = {BlogLand} exact/>
                        <Route path = "/users/register" component={Register} exact/>
                        <Route path = "/users/login" component = {Login} exact/>
                        <Route path = "/users/account" component = {Account} exact/>
@@ -40,6 +40,7 @@ class App extends React.Component{
                        <Route path = "/blog/add" component = {BlogNew} exact/>
                        <Route path = "/blog/show/:id" component = {BlogShow} exact/>
                        <Route path = "/blog/edit/:id" component = {BlogEdit} exact/>
+                       <Route path = "/blog/all" component = {BlogLand} exact/>
                     </Switch>
                 </BrowserRouter>
             </div>
