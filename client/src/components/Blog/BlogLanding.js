@@ -40,7 +40,7 @@ class BlogLand extends React.Component{
                             return <tr key = {blog._id} className="col-md-4">
                                         <div>
                                             <div className="card">
-                                            <img src={blog.image} class="card-img-top" alt="image"/>
+                                            <img src={blog.image} class="card-img-top" alt="blog"/>
                                                 <div className="card-body">
                                                     <Link to = {`/blog/show/${blog._id}`}><h5 className="card-title">{blog.title}</h5></Link>
                                                     

@@ -29,7 +29,7 @@ class BlogShow extends React.Component{
             <div className="container pt-sm-5 col-sm-4">
                 <div className="Row">
                     <div className="card">
-                        <img src={this.state.blog.image} class="card-img-top" alt="image"/>
+                        <img src={this.state.blog.image} class="card-img-top" alt="blog"/>
                         <div className="card-body">
                         <h2 className="card-title text-center">{this.state.blog.title}</h2>
                         <p>{this.state.blog.description}</p>
