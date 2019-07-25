@@ -35,7 +35,7 @@ class Form extends React.Component{
     render(){
         return(
             <div>
-                <form onSubmit={this.handleSubmit} >
+                <form className="form-group" onSubmit={this.handleSubmit} >
                     <div>
                         <label>Title</label>
                         <input 
@@ -43,8 +43,9 @@ class Form extends React.Component{
                         name="title"
                         value={this.state.title}
                         onChange = {this.handleChange}
-                        placeholder= "title"/>
-                    </div>
+                        placeholder= "title"
+                        className="form-control"/>
+                    </div><br/>
                     <div>
                         <label>Description</label> <br/>
                         <textarea 
@@ -52,15 +53,12 @@ class Form extends React.Component{
                         value={this.state.description}
                         onChange = {this.handleChange}
                         placeholder = "description"
-                        rows = "3"
+                        className="form-control"
+                        rows = "8"
                         cols = "50">
                         </textarea>
-                    </div>
-                    <label>
-                        <input
-                            type= "submit"
-                            />
-                    </label>
+                    </div><br/>
+                    <button type="submit" className="btn btn-dark">Submit</button>
                 </form>
             </div>
         )

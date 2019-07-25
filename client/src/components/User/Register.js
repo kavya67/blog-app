@@ -39,8 +39,11 @@ class Register extends React.Component{
     }
     render(){
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
+            <div className="container pt-sm-5 col-sm-6">
+                <div  className="card">
+                    <div className="card-body">
+                    <h5 className="card-title text-center">Register</h5>
+                    <form className="form-group" onSubmit={this.handleSubmit}>
                     <div>
                         <label>Name</label>
                         <input  
@@ -49,8 +52,9 @@ class Register extends React.Component{
                             name = "username"
                             value ={this.state.username}
                             placeholder="username"
+                            className="form-control"
                             />
-                    </div>
+                    </div><br/>
                     <div>
                         <label>Email</label>
                         <input 
@@ -59,8 +63,9 @@ class Register extends React.Component{
                             name="email"
                             value={this.state.email}
                             placeholder="Email"
+                            className="form-control"
                             />
-                    </div>
+                    </div><br/>
                     <div>
                         <label>Password</label>
                         <input 
@@ -69,13 +74,13 @@ class Register extends React.Component{
                             name="password"
                             value={this.state.password}
                             placeholder="Password"
+                            className="form-control"
                             />    
-                    </div>
-                    <label>
-                        <input
-                            type = "submit"/>
-                    </label>
+                    </div><br/>
+                    <button type="submit" className="btn btn-dark">Submit</button>
                 </form>
+                    </div>
+                </div>
             </div>
         )
     }

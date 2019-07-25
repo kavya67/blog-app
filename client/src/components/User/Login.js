@@ -41,31 +41,35 @@ class Login extends React.Component{
     }
     render(){
         return(
-            <div>
-                <h1 class = "display-4 text-center">Login</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <div className = "form-group">
-                        <label>Email</label>
-                            <input 
-                                type="text" 
-                                className = "form-control" 
-                                value={this.state.email} 
-                                name='email' 
-                                onChange={this.handleChange}/>
+            <div className="container pt-sm-5 col-sm-6">
+                <div  className="card">
+                    <div  className="card-body">
+                    <h5 className="card-title text-center">Login</h5>
+                        <form onSubmit={this.handleSubmit}>
+                            <div className = "form-group">
+                                <label>Email</label>
+                                    <input 
+                                        type="text" 
+                                        className = "form-control" 
+                                        value={this.state.email} 
+                                        name='email' 
+                                        onChange={this.handleChange}
+                                        placeholder= "Email"/>
+                            </div>
+                            <div className = "form-group">
+                            <label>Password </label>
+                                <input 
+                                    type="password"  
+                                    className = "form-control"
+                                    value= {this.state.password} 
+                                    name = 'password' 
+                                    onChange={this.handleChange}
+                                    placeholder="Password"/>
+                            </div>
+                            <button type="submit" className="btn btn-dark">Submit</button>
+                        </form>
                     </div>
-                    <div className = "form-group">
-                    <label>Password </label>
-                        <input 
-                            type="password"  
-                            className = "form-control"
-                            value= {this.state.password} 
-                            name = 'password' 
-                            onChange={this.handleChange}/>
-                    </div>
-                    <label>
-                        <input type = "submit" />
-                    </label>
-                </form>
+                </div>
             </div>
         )
     }

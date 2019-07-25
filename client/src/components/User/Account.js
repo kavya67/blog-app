@@ -21,12 +21,12 @@ class Account extends React.Component{
     }
     render(){   
         return(
-            <div>
-                <h1>Welcome {this.props.user.username}</h1>
-                <BlogList/>
-                <Link to = "/blog/add">Create Blog</Link>
-                
-
+            <div className="container pt-sm-5 col-sm-6"> 
+                <div className="Row">
+                    <h1 className="text-center">Welcome {this.props.user.username}</h1>
+                        <BlogList/>
+                    <Link to = "/blog/add" className="btn btn-outline-info btn-sm">Create Blog</Link>
+                </div>
             </div>
         )
     }

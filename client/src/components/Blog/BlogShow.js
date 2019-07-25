@@ -1,5 +1,5 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 import axios from '../../config/config';
 
 class BlogShow extends React.Component{
@@ -26,9 +26,17 @@ class BlogShow extends React.Component{
     render(){
         // console.log('id',this.props.match.params.id)
         return(
-            <div>
-                <h2>{this.state.blog.title}</h2>
-                <p>{this.state.blog.description}</p>
+            <div className="container pt-sm-5 col-sm-6">
+                <div className="Row">
+                    <div className="card">
+                        <div className="card-body">
+                        <h2 className="card-title">{this.state.blog.title}</h2>
+                        <p>{this.state.blog.description}</p>
+                    </div>
+                </div>
+            </div><br/>
+                    <Link to="/blog/all" className="btn btn-outline-info btn-sm"> Back </Link>
+                
             </div>
         )
     }

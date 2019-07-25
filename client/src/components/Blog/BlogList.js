@@ -43,19 +43,52 @@ class BlogList extends React.Component{
 
     render(){
         return(
-            <div>
-                <ul>
+            <div className="pt-sm-5">                        
+               <table>
+                   <tbody>
+                       <td className="row">
+                       
                     {
                         this.props.blogs.map(blog=>{
-                            return <li key = {blog._id}>
-                                <Link to = {`/blog/show/${blog._id}`}>{blog.title}</Link>
-                                <Link to = {`/blog/edit/${blog._id}`}>Edit</Link>
-                                <button onClick= {()=>{this.handleDelete(blog._id)}}>Remove</button>
-                            </li>
-                        })
+                            return <tr key = {blog._id} className="col-md-6">
+                                        <div>
+                                            <div className="card">
+                                                <div className="card-body">
+                                                <Link to = {`/blog/show/${blog._id}`} ><h5 className="card-title">{blog.title}</h5></Link>
+                                                <Link to = {`/blog/edit/${blog._id}`} className="btn btn-outline-info btn-sm">Edit</Link><span> </span>
+                                                <button className="btn btn-outline-info btn-sm" onClick= {()=>{this.handleDelete(blog._id)}}>Remove</button>
+                                                </div>
+                                            </div><br/>
+                                        </div>
+                                </tr>
+                            })
+                    
                     }
-                </ul>
-            </div>
+                
+                       </td>
+                   </tbody>
+               </table>
+        </div>
+
+        //    <div className="row">
+        //        <div className="col-sm-6">
+        //            <div className="card">
+                        
+        //                     <ul>
+        //                         {
+        //                             this.props.blogs.map(blog=>{
+        //                                 return <li key = {blog._id} className="card-body">
+        //                                     <Link to = {`/blog/show/${blog._id}`} className="card-title">{blog.title}</Link>
+        //                                     <Link to = {`/blog/edit/${blog._id}`}>Edit</Link>
+        //                                     <button onClick= {()=>{this.handleDelete(blog._id)}}>Remove</button>
+        //                                 </li>
+        //                             })
+        //                         }
+        //                     </ul>
+                    
+        //            </div>
+        //        </div>
+        //    </div>
         )
     }
 }

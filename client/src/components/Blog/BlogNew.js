@@ -27,9 +27,13 @@ class BlogNew extends React.Component{
 
     render(){
         return(
-            <div>
-                <h1>Create Blog</h1>
-                <Form handleSubmit = {this.handleSubmit}/>
+            <div className="container pt-sm-5 col-sm-8">
+               <div  className="card">
+                   <div className="card-body">
+                        <h5 className="card-title text-center">Create Blog</h5>
+                        <Form handleSubmit = {this.handleSubmit}/>
+                   </div>
+               </div>
             </div>
         )
     }
