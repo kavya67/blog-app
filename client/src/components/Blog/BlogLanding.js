@@ -27,21 +27,23 @@ class BlogLand extends React.Component{
     }
     render(){
         return(
-            <div className="container pt-sm-5 col-sm-6">
+            <div className="container pt-sm-5 col-sm-8">
                 <div className="Row">
                     <h1 className="text-center">Explore More Blogs...</h1>
                         <div>
                         <table>
                    <tbody>
-                       <td className="row">
+                       <td className="row pt-sm-5">
                        
                     {
                       this.state.blogs &&  this.state.blogs.map(blog=>{
-                            return <tr key = {blog._id} className="col-md-6">
+                            return <tr key = {blog._id} className="col-md-4">
                                         <div>
                                             <div className="card">
+                                            <img src={blog.image} class="card-img-top" alt="image"/>
                                                 <div className="card-body">
-                                                <Link to = {`/blog/show/${blog._id}`}><h5 className="card-title">{blog.title}</h5></Link>
+                                                    <Link to = {`/blog/show/${blog._id}`}><h5 className="card-title">{blog.title}</h5></Link>
+                                                    
                                                 </div>
                                             </div><br/>
                                         </div>

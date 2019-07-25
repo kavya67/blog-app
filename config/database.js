@@ -1,8 +1,11 @@
 const mongoose = require('mongoose')
-const path = `mongodb://localhost:27017/blog-app`
+// const URI = `mongodb://localhost:27017/blog-app`
+const URI = process.env.MONGODB_URI || `mongodb+srv://blogger:blogger@123@cluster0-quxxf.mongodb.net/test?retryWrites=true&w=majority`
 mongoose.Promise = global.Promise
 
-mongoose.connect(path,{useNewUrlParser: true})
+mongoose.set("useCreateIndex", true)
+mongoose.set("useFindAndModify", false)
+mongoose.connect(URI,{useNewUrlParser: true})
     .then(()=>{
         console.log('connected to db')
     })

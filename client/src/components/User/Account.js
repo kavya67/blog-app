@@ -21,7 +21,7 @@ class Account extends React.Component{
     }
     render(){   
         return(
-            <div className="container pt-sm-5 col-sm-6"> 
+            <div className="container pt-sm-5 col-sm-8"> 
                 <div className="Row">
                     <h1 className="text-center">Welcome {this.props.user.username}</h1>
                         <BlogList/>

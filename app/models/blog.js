@@ -7,7 +7,8 @@ const blogSchema = new Schema({
         required: true
     },
     image: {
-        type: String
+        type: String,
+        default:"https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/08/143944974601-materialdesign_introduction.png"
     },
     description: {
         type: String,

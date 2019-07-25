@@ -50,9 +50,10 @@ class BlogList extends React.Component{
                        
                     {
                         this.props.blogs.map(blog=>{
-                            return <tr key = {blog._id} className="col-md-6">
+                            return <tr key = {blog._id} className="col-sm-4">
                                         <div>
                                             <div className="card">
+                                            <img src={blog.image} class="card-img-top" alt="image"/>
                                                 <div className="card-body">
                                                 <Link to = {`/blog/show/${blog._id}`} ><h5 className="card-title">{blog.title}</h5></Link>
                                                 <Link to = {`/blog/edit/${blog._id}`} className="btn btn-outline-info btn-sm">Edit</Link><span> </span>
