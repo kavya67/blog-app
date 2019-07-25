@@ -8,8 +8,8 @@ app.use(express.json())
 app.use(cors())
 
 
-// const port = 3006
-const port = process.env.PORT || 3006
+const port = 3006
+// const port = process.env.PORT || 3006
 
 const userRouter = require('./app/controllers/userController')
 const blogRouter = require('./app/controllers/blogController')
@@ -18,10 +18,10 @@ const blogRouter = require('./app/controllers/blogController')
 app.use('/users', userRouter)
 app.use('/blog', blogRouter)
 
-app.use(express.static(path.join(__dirname,"client/build")))
-app.get("*",(req,res)=>{
-	res.sendFile(path.join(__dirname + "/client/build/index.html"))
-})
+// app.use(express.static(path.join(__dirname,"client/build")))
+// app.get("*",(req,res)=>{
+// 	res.sendFile(path.join(__dirname + "/client/build/index.html"))
+// })
 
 
 
